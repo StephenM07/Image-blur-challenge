@@ -1,18 +1,21 @@
+class Image
+  def initialize(pic)
+    @picture = pic
+  end
 
+  def output_image
+    @picture.each do|row|
+      puts row.join("")
+      
 
-image = ([
+    end
+  end
+end
+
+image = Image.new ([
   [0, 0, 0, 0],
   [0, 1, 0, 0],
   [0, 0, 0, 1],
   [0, 0, 0, 0]
 ])
-
-image.each do|row|
-
-  row.each do|col|
-
-    print col.to_s + " "
-  end
-  puts
-
-end
+image.output_image
